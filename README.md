@@ -1,0 +1,2 @@
+# Interactive-AI-Robot-Mascot-Virtual-Avatar-for-River-Centric-Community-Engagement-in-Namami-Gange
+This project develops an AI/ML-powered robot mascot and virtual avatar to boost community engagement in the Namami Gange Programme. Combining NLP, sentiment analysis, computer vision, and reinforcement learning, it enables multilingual, emotion-aware, and adaptive interactions for sustained river-centric awareness.
