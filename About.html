@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="logo_taskbar.jpg" />
+  <title>About NMCG — National Mission for Clean Ganga</title>
+  <style>
+    :root{
+      --green:#0a6b2b;
+      --light-green:#0f7f36;
+      --accent:#b22222; /* firebrick red for heading */
+      --card-border:#90c7f1;
+      --page-bg:#f8fbff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{margin:0;background:var(--page-bg);color:#222;line-height:1.6}
+     /* header styles (kept inside header.html for easy include) */
+    .util-bar {
+      background:#ff9800; color:#111; font-weight:600;
+      padding:6px 14px; display:flex; align-items:center; justify-content:flex-end;
+      gap:14px; font-family:Arial,Helvetica,sans-serif; font-size:14px;
+    }
+    .util-bar .left { margin-right:auto; display:flex; align-items:center; gap:12px; }
+    .util-bar a { color:#000; text-decoration:none; margin-left:6px; }
+    .brand-row {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 18px; background:#fff;
+    }
+    .brand-row .logo { display:flex; align-items:center; gap:12px; }
+    .brand-row img.logo-img { height:64px; }
+    .brand-row .site-title { text-align:center; font-family: Georgia, 'Times New Roman', serif; color:#1c6ea4; font-size:28px; line-height:1; }
+    .nav-bar {
+      background:#0a6b2b; color:#fff; padding:12px 18px; font-weight:700;
+      display:flex; gap:18px; flex-wrap:wrap; align-items:center;
+    }
+    .nav-bar a { color:#fff; text-decoration:none; padding:6px 8px; font-size:15px; }
+    /* dropdown basic */
+    .nav-item { position:relative; }
+    .nav-item .dropdown { display:none; position:absolute; top:40px; left:0; background:#fff; color:#333; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.12); min-width:200px; z-index:50; }
+    .nav-item .dropdown a { display:block; padding:10px 12px; color:#222; text-decoration:none; }
+    .nav-item:hover .dropdown { display:block; }
+    /* responsive */
+    @media(max-width:720px){
+      .brand-row .site-title{font-size:20px}
+      .brand-row img.logo-img{height:48px}
+      .nav-bar{font-size:14px}
+    }
+
+    /* Top navigation similar to screenshot */
+    .top-nav{background:var(--green);color:#fff;position:sticky;top:0;z-index:50}
+    .top-nav .container{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:20px}
+    .brand{font-weight:700;letter-spacing:0.6px}
+    .nav-items{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+    .nav-item{padding:6px 10px;border-radius:3px}
+    .nav-item:hover{background:rgba(255,255,255,0.06);cursor:pointer}
+
+    /* Page container */
+    .container-main{max-width:1100px;margin:28px auto;padding:16px}
+
+    /* Card style matching screenshot */
+    .card{background:#fff;border-radius:6px;padding:22px;border:4px solid var(--card-border);box-shadow:0 6px 18px rgba(13,60,90,0.06)}
+    .card-header{display:flex;align-items:center;justify-content:center;margin-top:-20px}
+    .card-title{background:#fff;padding:10px 26px;border-radius:6px;border:3px solid rgba(142,187,214,0.25);font-size:28px;color:var(--accent);font-weight:700}
+
+    /* Content styles */
+    h2{color:var(--accent)}
+    p{margin:14px 0}
+    ul{margin:12px 0 20px 20px}
+    ol{margin:12px 0 20px 20px}
+    a.pdf{color:var(--green);text-decoration:none;font-weight:600}
+    a.pdf:hover{text-decoration:underline}
+
+    /* Responsive */
+    @media (max-width:720px){
+      .card{padding:16px}
+      .card-title{font-size:20px;padding:8px 16px}
+      .top-nav .container{padding:10px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="util-bar">
+    <div class="left">
+      <!-- optionally include social icons or left side text -->
+      <span style="font-size:13px;color:#222">Follow:</span>
+      <a href="https://www.facebook.com/cleanganganmcg/" aria-label="Facebook">f</a>
+      <a href="https://x.com/cleanganganmcg" aria-label="X">x</a>
+      <a href="https://www.youtube.com/channel/UCdslrfFfeUDBQHNPDK6q8YQ" aria-label="YouTube">▶</a>
+      <a href="https://www.instagram.com/namamigange/" aria-label="Instagram">◔</a>
+    </div>
+
+    <div class="date">02/Dec/2025</div>
+    <div style="margin-left:10px"><a href="#" title="Search">🔍</a></div>
+  </div>
+
+  <!-- logo / title row -->
+  <div class="brand-row">
+    <div class="logo">
+      <!-- replace src with your emblem image -->
+      <img class="logo-img" src="satyamev_jayate.png" alt="Government Emblem" />
+    </div>
+    <div class="site-title">
+      <div style="font-size:30px; font-weight:700;">National Mission for Clean Ganga</div>
+      <div style="font-size:14px; margin-top:4px; color:#2f6b8a;">Ministry of Jal Shakti — Department of Water Resources</div>
+    </div>
+    <div style="width:120px; text-align:right;">
+      <!-- right-hand logo (replace src with your image) -->
+      <img src="nmcgGif.gif" alt="Namm-Ganga" style="height:64px" />
+    </div>
+  </div>
+
+  <!-- main green nav -->
+  <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+    <a href="index.html">HOME</a>
+
+    <div class="nav-item">
+      <a href="About.html">ABOUT ▾</a>
+      <div class="dropdown" aria-hidden="true">
+        <a href="About.html">About NMCG</a>
+        <a href="Vision.html">Vision & Mission</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a href="Divisions.html">DIVISIONS ▾</a>
+      <div class="dropdown" aria-hidden="true">
+        <a href="#">Division 1</a>
+        <a href="#">Division 2</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a href="NCG.html">GANGA INSTITUTIONS ▾</a>
+      <div class="dropdown" aria-hidden="true">
+        <a href="NGC.html">National Ganga Council (NGC)</a>
+        <a href="ETF.html">Empowered Task Force (ETF)</a>
+      </div>
+    </div>
+
+    <a href="River_Related.html">RIVER RELATED COURSES</a>
+    <a href="Guidelines.html">GUIDELINES / POLICY DOCUMENTS</a>
+    <a href="Contact.html">CONTACT</a>
+  </nav>
+  </header>
+
+  <main class="container-main" role="main">
+    <div class="card" aria-labelledby="about-title">
+      <div class="card-header">
+        <div id="about-title" class="card-title">About NMCG</div>
+      </div>
+
+      <section style="margin-top:18px">
+        <p><strong>National Mission for Clean Ganga (NMCG)</strong> was registered as a society on <strong>12th August 2011</strong> under the Societies Registration Act 1860. It acted as implementation arm of National Ganga River Basin Authority (NGRBA) which was constituted under the provisions of the Environment (Protection) Act (EPA), 1986. NGRBA has since been dissolved with effect from the <strong>7th October 2016</strong>, consequent to constitution of National Council for Rejuvenation, Protection and Management of River Ganga (referred as National Ganga Council).</p>
+
+        <p>
+          <a class="pdf" href="#">S.O. 3187(E) dt. 7th October 2016 under EPA 1986 (PDF 1MB)</a>
+          &nbsp; <span style="background:#ffd33d;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:8px">NEW</span>
+          &nbsp; &nbsp; <a class="pdf" href="#">(Amendment) Order, 2nd September 2019 (PDF 337KB)</a>
+          &nbsp; <span style="background:#ffd33d;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:8px">NEW</span>
+          &nbsp; &nbsp; <a class="pdf" href="#">S.O. 3845(E) dt. 22nd August 2025 under EPA 1986 (PDF 1MB)</a>
+        </p>
+
+        <p>The Act envisages five tier structure at national, state and district level to take measures for prevention, control and abatement of environmental pollution in river Ganga and to ensure continuous adequate flow of water so as to rejuvenate the river Ganga as below;</p>
+
+        <ol>
+          <li><strong>National Ganga Council</strong> under chairmanship of Hon’ble Prime Minister of India.</li>
+          <li><strong>Empowered Task Force (ETF)</strong> on river Ganga under chairmanship of Hon’ble Union Minister of Jal Shakti (Department of Water Resources, River Development and Ganga Rejuvenation).</li>
+          <li><strong>National Mission for Clean Ganga (NMCG).</strong></li>
+          <li><strong>State Ganga Committees</strong>.</li>
+          <li><strong>District Ganga Committees</strong> in every specified district abutting river Ganga and its tributaries in the states.</li>
+        </ol>
+
+        <p>NMCG is registered as a society under the Societies Registration Act, 1860. The Mission is the implementation arm of the National Ganga Council and works with states, urban local bodies, and other stakeholders for river rejuvenation.</p>
+
+        <p style="font-size:14px;color:#444">This page is a simplified, responsive HTML version of the 'About NMCG' content shown in your screenshot and is ready to drop into any website. Replace the <code>#</code> hrefs with actual PDF URLs or resources as required.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer style="text-align:center;padding:18px 8px;color:#666;font-size:13px">
+    © National Mission for Clean Ganga — sample HTML. Update links and assets before publishing.
+  </footer>
+</body>
+</html>

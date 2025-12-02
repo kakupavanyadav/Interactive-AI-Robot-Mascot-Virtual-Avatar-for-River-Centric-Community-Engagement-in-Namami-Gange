@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="logo_taskbar.jpg" />
+  <title>River Related Courses</title>
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5fbff;color:#222}
+
+    /* Top Navigation */
+    .top-nav{background:#0a6b2b;color:#fff;padding:12px 18px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;font-size:15px;font-weight:600}
+    .top-nav div:hover{cursor:pointer;opacity:0.9}
+     /* header styles (kept inside header.html for easy include) */
+    .util-bar {
+      background:#ff9800; color:#111; font-weight:600;
+      padding:6px 14px; display:flex; align-items:center; justify-content:flex-end;
+      gap:14px; font-family:Arial,Helvetica,sans-serif; font-size:14px;
+    }
+    .util-bar .left { margin-right:auto; display:flex; align-items:center; gap:12px; }
+    .util-bar a { color:#000; text-decoration:none; margin-left:6px; }
+    .brand-row {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:12px 18px; background:#fff;
+    }
+    .brand-row .logo { display:flex; align-items:center; gap:12px; }
+    .brand-row img.logo-img { height:64px; }
+    .brand-row .site-title { text-align:center; font-family: Georgia, 'Times New Roman', serif; color:#1c6ea4; font-size:28px; line-height:1; }
+    .nav-bar {
+      background:#0a6b2b; color:#fff; padding:12px 18px; font-weight:700;
+      display:flex; gap:18px; flex-wrap:wrap; align-items:center;
+    }
+    .nav-bar a { color:#fff; text-decoration:none; padding:6px 8px; font-size:15px; }
+    /* dropdown basic */
+    .nav-item { position:relative; }
+    .nav-item .dropdown { display:none; position:absolute; top:40px; left:0; background:#fff; color:#333; border-radius:4px; box-shadow:0 6px 18px rgba(0,0,0,0.12); min-width:200px; z-index:50; }
+    .nav-item .dropdown a { display:block; padding:10px 12px; color:#222; text-decoration:none; }
+    .nav-item:hover .dropdown { display:block; }
+    /* responsive */
+    @media(max-width:720px){
+      .brand-row .site-title{font-size:20px}
+      .brand-row img.logo-img{height:48px}
+      .nav-bar{font-size:14px}
+    }
+
+    /* Page container */
+    .wrapper{max-width:1200px;margin:28px auto;padding:0 16px}
+
+    /* Card wrapper */
+    .card-box{background:#fff;border:4px solid #90c7f1;border-radius:6px;box-shadow:0 6px 18px rgba(13,60,90,0.08);padding:22px}
+
+    /* Header */
+    .page-title{text-align:center;font-size:32px;color:#b22222;font-weight:700;margin-top:-10px;margin-bottom:30px}
+
+    /* Courses grid */
+    .courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;justify-items:center;padding:20px 0}
+
+    .course-card{background:#fff;border:2px solid #ddd;border-radius:10px;width:100%;max-width:380px;height:260px;display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,0.08);transition:0.25s}
+
+    .course-card:hover{transform:translateY(-6px);box-shadow:0 6px 20px rgba(0,0,0,0.12)}
+
+    .course-card img{width:110px;margin-bottom:18px;opacity:0.85}
+
+    .course-title{font-size:21px;font-weight:600;text-align:center}
+
+    @media(max-width:600px){
+      .page-title{font-size:24px}
+      .course-card{height:230px}
+      .course-card img{width:90px}
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="util-bar">
+    <div class="left">
+      <!-- optionally include social icons or left side text -->
+      <span style="font-size:13px;color:#222">Follow:</span>
+      <a href="https://www.facebook.com/cleanganganmcg/" aria-label="Facebook">f</a>
+      <a href="https://x.com/cleanganganmcg" aria-label="X">x</a>
+      <a href="https://www.youtube.com/channel/UCdslrfFfeUDBQHNPDK6q8YQ" aria-label="YouTube">▶</a>
+      <a href="https://www.instagram.com/namamigange/" aria-label="Instagram">◔</a>
+    </div>
+
+    <div class="date">02/Dec/2025</div>
+    <div style="margin-left:10px"><a href="#" title="Search">🔍</a></div>
+  </div>
+
+  <!-- logo / title row -->
+  <div class="brand-row">
+    <div class="logo">
+      <!-- replace src with your emblem image -->
+      <img class="logo-img" src="satyamev_jayate.png" alt="Government Emblem" />
+    </div>
+    <div class="site-title">
+      <div style="font-size:30px; font-weight:700;">National Mission for Clean Ganga</div>
+      <div style="font-size:14px; margin-top:4px; color:#2f6b8a;">Ministry of Jal Shakti — Department of Water Resources</div>
+    </div>
+    <div style="width:120px; text-align:right;">
+      <!-- right-hand logo (replace src with your image) -->
+      <img src="nmcgGif.gif" alt="Namm-Ganga" style="height:64px" />
+    </div>
+  </div>
+
+  <!-- main green nav -->
+  <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+    <a href="index.html">HOME</a>
+
+    <div class="nav-item">
+      <a href="About.html">ABOUT ▾</a>
+      <div class="dropdown" aria-hidden="true">
+        <a href="About.html">About NMCG</a>
+        <a href="Vision.html">Vision & Mission</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a href="Divisions.html">DIVISIONS ▾</a>
+      <div class="dropdown" aria-hidden="true">
+        <a href="#">Division 1</a>
+        <a href="#">Division 2</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a href="NCG.html">GANGA INSTITUTIONS ▾</a>
+      <div class="dropdown" aria-hidden="true">
+        <a href="NGC.html">National Ganga Council (NGC)</a>
+        <a href="ETF.html">Empowered Task Force (ETF)</a>
+      </div>
+    </div>
+
+    <a href="River_Related.html">RIVER RELATED COURSES</a>
+    <a href="Guidelines.html">GUIDELINES / POLICY DOCUMENTS</a>
+    <a href="Contact.html">CONTACT</a>
+  </nav>
+    </header>
+  <div class="top-nav">
+    <div>GANGA KNOWLEDGE CENTRE</div>
+    <div>CLEAN GANGA FUND ▾</div>
+    <div>GANGA INSTITUTIONS ▾</div>
+    <div>RIVER CITIES ALLIANCE (RCA) ▾</div>
+    <div>PROGRAMME EVALUATION ▾</div>
+    <div>PUBLIC OUTREACH ▾</div>
+    <div>RIVER RELATED COURSES</div>
+  </div>
+
+  <div class="wrapper">
+    <div class="card-box">
+      <div class="page-title">River Related Courses</div>
+
+      <div class="courses">
+        <!-- Post Graduate Programme -->
+        <div class="course-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="PG Programme Icon" />
+          <div class="course-title">Post Graduate Programme</div>
+        </div>
+
+        <!-- Certification Courses -->
+        <div class="course-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135692.png" alt="Certification Icon" />
+          <div class="course-title">Certification Courses</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
